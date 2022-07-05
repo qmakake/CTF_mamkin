@@ -1,1 +1,0 @@
-[Tue Jun 28 07:05:05.725317 2022] [autoindex:error] [pid 18] [client 127.0.0.1:51076] AH01276: Cannot serve directory /var/www/flag/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive

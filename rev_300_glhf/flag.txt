@@ -1,0 +1,2 @@
+GPB{XXXX}_ + Encryption_key
+

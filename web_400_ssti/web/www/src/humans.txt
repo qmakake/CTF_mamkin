@@ -1,0 +1,2 @@
+Disallow: All
+Allow: /?name=Milo

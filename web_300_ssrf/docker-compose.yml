@@ -28,7 +28,7 @@ services:
       - internet
       - no-internet
     ports:
-      - 8000:4041/tcp
+      - 4041:4041/tcp
     volumes:
       - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./logs/proxy/:/var/log/nginx/
