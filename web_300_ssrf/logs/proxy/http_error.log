@@ -1,0 +1,1 @@
+2022/06/28 15:06:07 [warn] 25#25: *2 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/1/00/0000000001 while reading upstream, client: 195.225.38.17, server: _, request: "GET /back.css HTTP/1.1", upstream: "http://192.168.208.2:80/back.css", host: "185.98.82.101:8000", referrer: "http://185.98.82.101:8000/"

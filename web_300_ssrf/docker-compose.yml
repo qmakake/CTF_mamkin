@@ -1,0 +1,36 @@
+version: "3.3"
+
+networks:
+  internet: {}
+  no-internet:
+    internal: true
+
+services:
+  web-ssrf:
+    image: php:7.2-apache
+    container_name: web-ssrf
+    volumes:
+      - ./web/src_flag:/var/www/flag
+      - ./web/src:/var/www/html
+      - ./web/configs/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./web/configs/ports.conf:/etc/apache2/ports.conf
+      - ./web/configs/php.ini:/usr/local/etc/php/php.ini
+      - ./logs/web-ssrf/:/var/log/apache2/
+    networks:
+      - no-internet
+    ports:
+      - 80:80
+
+  proxy:
+    image: nginx:latest
+    container_name: proxy
+    networks:
+      - internet
+      - no-internet
+    ports:
+      - 8000:4041/tcp
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./logs/proxy/:/var/log/nginx/
+    links:
+      - web-ssrf
