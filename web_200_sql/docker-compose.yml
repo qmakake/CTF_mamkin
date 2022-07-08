@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  web-sql:
+    build: .
+    container_name: web-sql
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - 80:80
+    links:
+      - db-sql
+  
+  db-sql:
+    image: mysql
+    container_name: db-sql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: sqlauth
