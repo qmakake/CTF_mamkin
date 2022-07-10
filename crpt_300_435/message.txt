@@ -1,0 +1,6 @@
+KEY=???
+IV=25d55ad283aa400af464c76d713c07ad
+cipher=aes-256-ctr
+encrypted_flag=GA93SXcuNJIMthvtii0=
+decrypted_flag=???
+

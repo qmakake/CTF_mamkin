@@ -1,4 +1,4 @@
 <?php
 	//flag: GPB{Your_SSTI_is_Perfect}
-	echo 'Flag here but try harder!';
+	echo 'Flag is here, but try harder!';
 ?>

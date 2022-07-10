@@ -15,4 +15,4 @@ xenc(){
 }
 
 XKEY="0x5e"
-xenc "GPB{x000000000000000red}"
+xenc $1

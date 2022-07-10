@@ -1,0 +1,4 @@
+Our bad employee encrypt few very important files. 
+Can you help to decrypt one of them and send it with encryption key in HEX?
+
+* flag format: GPB{XXXXX} + _ + HEX_BYTES_KEY

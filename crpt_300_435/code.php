@@ -4,7 +4,7 @@ $plaintext = 'GPB{AES256CTR}';
 $key='12345678';
 $method = 'aes-256-ctr';
 
-$iv = hex2bin('d003ef4b75e449a9161b967917937bfd');
+$iv = hex2bin('25d55ad283aa400af464c76d713c07ad');
 
 $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv));
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $key, OPENSSL_RAW_DATA, $iv);
