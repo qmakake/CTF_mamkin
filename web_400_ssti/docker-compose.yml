@@ -6,9 +6,9 @@ networks:
     internal: true
 
 services:
-  web:
+  web400site:
     image: bitnami/php-fpm:7.4
-    container_name: web
+    container_name: web400site
     networks:
       - no-internet
     volumes:
@@ -17,17 +17,17 @@ services:
       - ./web/configs/www.conf:/opt/bitnami/php/etc/php-fpm.d/www.conf
       - ./web/configs/php.ini:/opt/bitnami/php/etc/php.ini
       - ./logs/web/:/var/log/php-fpm/
-  proxy:
+  web400:
     image: nginx:latest
-    container_name: proxy
+    container_name: web400
     networks:
       - internet
       - no-internet
     ports:
-      - 4040:4040/tcp
+      - 4043:4043/tcp
     volumes:
       - ./proxy/configs/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./logs/proxy/:/var/log/nginx/
       - ./web/www/:/var/www/
     links:
-      - web
+      - web400site

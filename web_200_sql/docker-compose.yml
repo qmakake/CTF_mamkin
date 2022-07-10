@@ -1,18 +1,18 @@
-version: "3.9"
+version: "3.3"
 services:
-  web-sql:
+  web200:
     build: .
-    container_name: web-sql
+    container_name: web200
     volumes:
       - ./html:/var/www/html
     ports:
-      - 80:80
+      - 4041:80
     links:
-      - db-sql
+      - web200db
   
-  db-sql:
+  web200db:
     image: mysql
-    container_name: db-sql
+    container_name: web200db
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     volumes:

@@ -1,9 +1,9 @@
-version: "3.9"
+version: "3.3"
 services:
-  web-light:
+  web100:
     image: php:7.2-apache
-    container_name: web-light
+    container_name: web100
     volumes:
       - ./html:/var/www/html
     ports:
-      - 80:80
+      - 4040:80

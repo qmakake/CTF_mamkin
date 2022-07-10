@@ -20,7 +20,7 @@
 
 <?php
 	/* Attempt to connect to MySQL database */
-	$link = mysqli_connect('db-sql', 'admin', '12345', 'sqlauth');
+	$link = mysqli_connect('web200db', 'admin', '12345', 'sqlauth');
 	 
 	// Check connection
 	if($link === false){
