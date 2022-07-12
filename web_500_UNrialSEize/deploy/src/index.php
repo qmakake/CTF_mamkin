@@ -1,6 +1,5 @@
 <?php
 	highlight_file(__FILE__);
-	$b = 'implode';
 	call_user_func($_GET[_],$_POST);
 
 	session_start();
@@ -11,5 +10,5 @@
 	var_dump($_SESSION);
 
 	$a = array(reset($_SESSION),'GPB_CALL');
-	call_user_func($b,$a);
+	call_user_func('implode',$a);
 ?>
